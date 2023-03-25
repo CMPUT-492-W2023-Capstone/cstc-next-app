@@ -7,3 +7,12 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 console.log('Connected to DB');
+
+export default function TrafficDataTable() {
+    return (
+        <>
+            <p>Data Page</p>
+        </>
+    );
+}
+
