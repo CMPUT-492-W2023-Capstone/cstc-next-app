@@ -1,0 +1,13 @@
+.timestamp {
+    text-align: center;
+}
+
+
+.total {
+    text-align: center;
+}
+
+th, td {
+    border: black;
+    border-style: solid;
+}
