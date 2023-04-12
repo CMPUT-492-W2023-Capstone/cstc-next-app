@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '@/config';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import { getFirestore } from "firebase/firestore";
 import { useState, useEffect, useRef } from 'react';
 
 
