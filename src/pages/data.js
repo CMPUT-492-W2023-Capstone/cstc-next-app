@@ -14,6 +14,12 @@ function TrafficDataRow({ timestamp, total }) {
         <tr>
             <td className='timestamp'>{ timestamp }</td>
             <td className='total'>{ total } </td>
+            <td className='car'>{ car } </td>
+            <td className='bus'>{ bus } </td>
+            <td className='bicycle'>{ bicycle }</td>
+            <td className='motorcycle'>{ motorcycle }</td>
+            <td className='truck'>{ truck }</td>
+            <td className='train'>{ train }</td>
         </tr>
     );
 }
@@ -27,7 +33,25 @@ export default function TrafficDataTable() {
             const data = snapshot.val();
             const newRows = [];
             for (const time in data) {
-                newRows.push({'timestamp': time, 'total': data[time]['cumulative total']});
+                field = data[time];
+                total = field['cumulative total'];
+                car = field['car'] === undefined ? 0 : field['car'];
+                bus = field['bus'] === undefined ? 0 : field['bus'];
+                bicycle = field['bicycle'] === undefined ? 0 : field['bicycle'];
+                motorcycle = field['motorcycle'] === undefined ? 0 : field['motorcycle'];
+                truck = field['truck'] === undefined ? 0 : field['truck'];
+                train = field['train'] === undefined ? 0 : field['train'];
+                
+                newRows.push(
+                    {'timestamp': time, 
+                     'total': total,
+                     'car': car,
+                     'bus': bus,
+                     'bicycle': bicycle,
+                     'motorcycle': motocycle,
+                     'truck': truck,
+                     'train': train
+                    });
             }
 
             setRows(newRows);
