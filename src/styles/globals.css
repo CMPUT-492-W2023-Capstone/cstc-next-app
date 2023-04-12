@@ -20,13 +20,5 @@
   color: #333;
   padding: 10px;
   border-bottom: 1px solid #ddd;
-}
-
-.table .timestamp {
-  font-weight: bold;
-  text-align: center;
-}
-
-.table .total {
   text-align: center;
 }
