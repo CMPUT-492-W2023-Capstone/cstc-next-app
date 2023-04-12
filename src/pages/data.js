@@ -33,14 +33,14 @@ export default function TrafficDataTable() {
             const data = snapshot.val();
             const newRows = [];
             for (const time in data) {
-                field = data[time];
-                total = field['cumulative total'];
-                car = field['car'] === undefined ? 0 : field['car'];
-                bus = field['bus'] === undefined ? 0 : field['bus'];
-                bicycle = field['bicycle'] === undefined ? 0 : field['bicycle'];
-                motorcycle = field['motorcycle'] === undefined ? 0 : field['motorcycle'];
-                truck = field['truck'] === undefined ? 0 : field['truck'];
-                train = field['train'] === undefined ? 0 : field['train'];
+                const field = data[time];
+                const total = field['cumulative total'];
+                const car = field['car'] === undefined ? 0 : field['car'];
+                const bus = field['bus'] === undefined ? 0 : field['bus'];
+                const bicycle = field['bicycle'] === undefined ? 0 : field['bicycle'];
+                const motorcycle = field['motorcycle'] === undefined ? 0 : field['motorcycle'];
+                const truck = field['truck'] === undefined ? 0 : field['truck'];
+                const train = field['train'] === undefined ? 0 : field['train'];
                 
                 newRows.push(
                     {'timestamp': time, 
