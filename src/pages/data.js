@@ -48,7 +48,7 @@ export default function TrafficDataTable() {
                      'car': car,
                      'bus': bus,
                      'bicycle': bicycle,
-                     'motorcycle': motocycle,
+                     'motorcycle': motorcycle,
                      'truck': truck,
                      'train': train
                     });
