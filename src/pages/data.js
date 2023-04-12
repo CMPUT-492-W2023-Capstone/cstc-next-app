@@ -65,11 +65,17 @@ export default function TrafficDataTable() {
                 <tr>
                     <th>Timestamp</th>
                     <th>Number of Vehicles</th>
+                    <th>Number of Cars</th>
+                    <th>Number of Buses</th>
+                    <th>Number of Bicycles</th>
+                    <th>Number of Motorcycles</th>
+                    <th>Number of Trucks</th>
+                    <th>Number of Trains</th>
                 </tr>
             </thead>
             <tbody>
                 {rows.map((row, index) => (
-                    <TrafficDataRow key={index} timestamp={row.timestamp} total={row.total} />
+                    <TrafficDataRow key={index} timestamp={row.timestamp} total={row.total} car={row.car} bus={row.bus} bicycle={row.bicycle} motorcycle={row.motorcycle} truck={row.truck} train={row.train} />
                 ))}
             </tbody>
         </table>
