@@ -9,7 +9,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const devRef = ref(db, '53,5210:-113,5324');
 
-function TrafficDataRow({ timestamp, total }) {
+function TrafficDataRow({ timestamp, total, car, bus, bicycle, motorcycle, truck, train }) {
     return (
         <tr>
             <td className='timestamp'>{ timestamp }</td>
