@@ -1,13 +1,31 @@
-.timestamp {
-    text-align: center;
+.table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-
-.total {
-    text-align: center;
+.table th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  text-align: left;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
 }
 
-th, td {
-    border: black;
-    border-style: solid;
+.table td {
+  font-size: 14px;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table .timestamp {
+  font-weight: bold;
+}
+
+.table .total {
+  text-align: center;
 }
