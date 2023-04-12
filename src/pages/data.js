@@ -27,7 +27,7 @@ export default function TrafficDataTable() {
             const data = snapshot.val();
             const newRows = [];
             for (const time in data) {
-                newRows.push({'timestamp': time, 'total': data[time].total});
+                newRows.push({'timestamp': time, 'total': data[time]['cumulative total']});
             }
 
             setRows(newRows);
