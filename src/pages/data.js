@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from 'react';
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-const devRef = ref(db, '53,5210:-113,5324');
+const devRef = ref(db, '53,5428:-113,4974');
 
 function TrafficDataRow({ timestamp, total, car, bus, bicycle, motorcycle, truck, train }) {
     return (
